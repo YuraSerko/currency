@@ -20,7 +20,7 @@ application = get_wsgi_application()
 
 
 
-@periodic_task(run_every=crontab(minute="1"))
+@periodic_task(run_every=crontab(minute="60"))
 def my_task():
     address = 'http://openexchangerates.org/api/latest.json?app_id=' + api_id
     q=5

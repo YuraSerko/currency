@@ -60,8 +60,8 @@ class Converse:
             rate_dict[i] = 'amount must be number'
         if success == True: #no errors
             #write to cash if no errors
-            cache.set('cur1', [self.currency_code_1, cur1.value, cur1.currencies.name], 30) #simple list 
-            cache.set('cur2', [self.currency_code_2, cur2.value, cur2.currencies.name], 30) #simple list 
+            cache.set('cur1', [self.currency_code_1, cur1.value, cur1.currencies.name], 1800) #simple list 
+            cache.set('cur2', [self.currency_code_2, cur2.value, cur2.currencies.name], 1800) #simple list 
             rate_dict = dict({'cur1':c1.name, 'cur2':c2.name, 'cur1v':cur1.value, 'cur2v':cur2.value, 'amount':amount}) 
         return success, rate_dict
     
